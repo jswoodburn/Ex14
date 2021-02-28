@@ -7,6 +7,15 @@ def get_user_choice(question_string = "Enter your choice (r, p, or s): ", accept
         print(f"Your choice must be one of the letters: {acceptable_answer}.\n")
 
 # convert user choice to word
+def convert_user_choice(user_choice):
+    full_words={'R':'rock',
+                'P':'paper',
+                'S':'scissors'
+                }
+    return full_words[user_choice]
+
+
+
 
 
 # generate random number
