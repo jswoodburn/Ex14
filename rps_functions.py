@@ -7,12 +7,12 @@ def get_user_choice(question_string="\nEnter your choice (r, p, or s): ", accept
         user_choice = input(question_string)
         if user_choice.upper() in acceptable_answer:
             return user_choice.upper()
-        print(f"Your choice must be one of the letters: {acceptable_answer}.\n")
+        print(f"Your choice must be one of the letters: {', '.join(acceptable_answer)}.\n")
 
 
 # convert user choice to word
 def convert_user_choice(user_choice):
-    full_words= {'R': 'rock',
+    full_words = {'R': 'rock',
                 'P': 'paper',
                 'S': 'scissors'
                 }
@@ -45,5 +45,4 @@ def get_winner(user_choice, comp_choice):
     elif win_condition[user_choice] == comp_choice:
         return [1, "You win!"]
     else:
-        return [0, "You lose..."]
-
+        return [-1, "You lose..."]
