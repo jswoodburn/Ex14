@@ -29,7 +29,7 @@ def generate_comp_choice():
         return 'scissors'
     else:
         return 'paper'
-
+# ------------ compared with Michaela & Dolapo and realised a list would have been more optimal above.
 
 win_condition = {
     'rock': 'scissors',

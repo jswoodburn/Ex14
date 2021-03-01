@@ -29,7 +29,7 @@ while True:
     if win_list[0] < 0:  # if the computer has won
         comp_wins += 1
 
-    # does user want to play again?
+    # scorekeeping
     compare_scores = games_won - comp_wins
     add_on = ['.', ' to you.', ' to the computer.']
     # add_on = lambda compare_scores: ' to you.' if compare_scores > 0 else (' to the computer.' if compare_scores < 0 else '.')
@@ -40,6 +40,7 @@ while True:
     else:
         print(f"The score is a draw - it's {comp_wins} all.")
 
+    # does the user want to play again
     play_again = rps_functions.get_user_choice("Do you want to play again (Y/N): ", ['Y', 'N'])
     if play_again == 'N':
         break
